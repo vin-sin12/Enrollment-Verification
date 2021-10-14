@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Enrollment Verification Form</title>
+  </head>
+  <body>
+    <article class="container">
+      <!-- Heading -->
+      <h1>Enrollment Verification Form</h1>
+      <!-- Heading End-->
+
+      <form
+        onsubmit="event.preventDefault();mobileValidation();"
+        autocomplete="off"
+      >
+        <!--Name -->
+        <div class="info bottom">
+          <label>Name:</label>
+          <div class="inputs">
+            <input
+              type="text"
+              placeholder="First"
+              class="calc"
+              name="firstName"
+              id="firstname"
+              value=""
+              required
+            />
+            <input
+              type="text"
+              placeholder="Last"
+              class="calc"
+              name="lastName"
+              id="lastName"
+              value=""
+              required
+            />
+          </div>
+        </div>
+        <!--  Name End -->
+
+        <!--  BirthDate -->
+        <div class="birthdate bottom">
+          <label>DOB:</label>
+          <input type="date" id="birthdate" required />
+        </div>
+        <!--  BirthDate End-->
+
+        <!--  Contact  -->
+        <div class="contact bottom">
+          <label>Phone:</label>
+          <span id="message" style="color: red"></span>
+          <div class="inputs">
+            <input
+              type="tel"
+              placeholder="Phone"
+              class="calc"
+              name="phone"
+              id="phonenumber"
+              value=""
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="calc"
+              id="email"
+              name="mail"
+              value=""
+              required
+            />
+          </div>
+        </div>
+        <!--  Contact End-->
+
+        <!-- Other Details -->
+        <div class="other-details bottom">
+          <label>Fax Number:</label>
+          <div class="inputs">
+            <input
+              type="text"
+              class="input-address"
+              name="city"
+              id="city"
+              value=""
+              required
+            />
+          </div>
+        </div>
+
+        <div class="other-details bottom">
+          <label>Expected/Estimated graduation term and year</label>
+          <div class="inputs">
+            <input type="text" class="input-address" />
+          </div>
+        </div>
+
+        <div class="other-details bottom">
+          <label>Enrollment term(s) to be verified</label>
+          <div class="inputs">
+            <input type="text" class="input-address" />
+          </div>
+        </div>
+        <!-- Other Details End-->
+
+        <!-- verification sent -->
+        <div class="verification bottom">
+          <p>How do you want verification sent?</p>
+          <div class="yes"><input type="radio" /><label>Fax</label></div>
+          <div class="no"><input type="radio" /><label>Mail</label></div>
+        </div>
+        <!-- verification sent  end -->
+
+        <!--Name Recipitent -->
+        <div class="info bottom">
+          <label>Name:</label>
+          <div class="inputs">
+            <input type="text" placeholder="First" class="calc" />
+            <input type="text" placeholder="Last" class="calc" />
+          </div>
+        </div>
+        <!--  Name Recipitent End -->
+
+        <!-- Street Address PO -->
+        <div class="street bottom">
+          <label>Provide street address or PO box of recipient </label>
+          <div class="inputs">
+            <input type="text" class="input-address" />
+          </div>
+        </div>
+        <!-- Street Address PO End -->
+
+        <!-- Note -->
+        <div class="service bottom">
+          <label>Terms of Service<span class="col">*</span></label>
+          <div>
+            <input type="radio" name="radio" /><label
+              >I agree to the <a href="#">the terms of service</a></label
+            >
+          </div>
+        </div>
+        <!-- Note End -->
+
+        <!-- Registor -->
+        <!-- <div class="submit">
+          <input type="submit" value="Register" class="done" />
+        </div> -->
+        <!-- Registor -->
+
+        <!-- Registor -->
+        <div class="buttons">
+          <div class="submit">
+            <!-- <span class="success">success</span> -->
+            <input type="submit" value="Register" class="done" />
+          </div>
+          <div class="show-table">
+            <button class="btn done" id="table-button">Show Table</button>
+          </div>
+        </div>
+        <!-- Registor -->
+      </form>
+
+      <!-- Registered Table -->
+      <table>
+        <tr>
+          <td>
+            <table class="list" id="atheleteList">
+              <thead>
+                <tr>
+                  <th>Full Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Fax</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </td>
+        </tr>
+      </table>
+      <!-- Registered Athelete Table End-->
+    </article>
+
+    <script src="script.js"></script>
+  </body>
+</html>

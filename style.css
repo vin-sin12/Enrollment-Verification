@@ -1,0 +1,142 @@
+:root {
+  --complete-width: 96.3%;
+  --half-width: calc((100% - 4.8rem) / 2);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+
+/* Common Styles */
+.bottom {
+  margin-bottom: 2rem;
+}
+
+.calc {
+  width: var(--half-width);
+}
+
+input,
+select {
+  padding: 4px;
+}
+
+input:not(:last-child) {
+  margin-right: 10px;
+}
+
+h1,
+p,
+label {
+  color: #494747;
+}
+
+h1 {
+  letter-spacing: 2px;
+}
+
+.col {
+  color: #ff0000;
+  font-size: 15px;
+  font-weight: bolder;
+}
+/* Common Styles End */
+
+article {
+  margin-top: 3rem;
+  font-size: 1.4rem;
+  width: 60rem;
+  color: #968f8f;
+}
+
+/* Input field */
+.birthdate input {
+  width: var(--complete-width);
+}
+
+.athelete-email input {
+  width: var(--complete-width);
+}
+
+.athelete-phone input {
+  width: var(--complete-width);
+}
+
+.athelete-address input {
+  margin-bottom: 1.2rem;
+}
+
+.input-address {
+  width: var(--complete-width);
+}
+/* Input field End */
+
+.radio-inputs {
+  margin-top: 5px;
+}
+
+.athelete-physique {
+  display: flex;
+}
+
+/* Register */
+.buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5rem;
+}
+
+.done {
+  cursor: pointer;
+  padding: 1rem 4rem;
+  letter-spacing: 1.5px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+}
+/* Register End*/
+
+/* Registered Athelet Table */
+/* body > table {
+  width: 80%;
+} */
+
+table {
+  border-collapse: collapse;
+  width: 60rem;
+  margin-bottom: 10rem;
+}
+table.list {
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid #dddddd;
+  /* text-align: left; */
+  padding: 8px;
+}
+
+tr:nth-child(even),
+table.list thead > tr {
+  background-color: #dddddd;
+}
+/* Registered Athelet Table End */
